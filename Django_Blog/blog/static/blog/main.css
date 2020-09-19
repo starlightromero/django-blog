@@ -4,9 +4,21 @@ body {
   text-align: center;
 }
 
+header {
+  background-color: #BF5FFF;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  color: #EED2EE;
+}
+
 nav {
   align-items: center;
-  background-color: #BF5FFF;
   display: flex;
   flex-direction: row;
   height: 50px;
