@@ -5,28 +5,32 @@ body {
 }
 
 nav {
+  align-items: center;
   background-color: #BF5FFF;
   display: flex;
   flex-direction: row;
   height: 50px;
   justify-content: center;
-  align-items: center;
 }
 
-a {
+nav a {
   color: white;
   font-size: 20px;
   margin: 0 30px;
   text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
   color: #EED2EE;
 }
 
-.post {
+article {
+  align-items: center;
   border: 3px solid #BF5FFF;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 30px auto;
   width: 600px;
 }
