@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
   {% if title %}
     <title>Django Blog - {{ title }}</title>
   {% else %}
@@ -11,7 +13,13 @@
 </head>
 
 <body>
-  {% block content %}{% endblock %}
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+  </nav>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 </body>
 
 </html>
