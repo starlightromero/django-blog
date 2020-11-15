@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<div class="content-section">
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset>
+      <legend>Login</legend>
+      {{ form.as_p }}
+    </fieldset>
+    <button type="submit" name="login">Login</button>
+  </form>
+  <small>
+    Need an account? <a href="{% url 'register' %}">Sign Up Now</a>
+  </small>
+</div>
+
+{% endblock content %}
