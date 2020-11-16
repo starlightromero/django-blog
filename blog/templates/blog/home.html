@@ -1,14 +1,14 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 
-  {% for post in posts  %}
-  <article>
-    <img src="{{ post.author.profile.image.url }}" width="125">
-    <a href="#">{{ post.author }}</a>
-    <small>{{ post.date_posted|date:"F d, Y" }}</small>
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.content }}</p>
-  </article>
-  {% endfor %}
+{% for post in posts  %}
+<article>
+  <img src="{{ post.author.profile.image.url }}" width="125">
+  <a href="#">{{ post.author }}</a>
+  <small>{{ post.date_posted|date:"F d, Y" }}</small>
+  <h2><a href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+  <p>{{ post.content }}</p>
+</article>
+{% endfor %}
 
 {% endblock content %}
