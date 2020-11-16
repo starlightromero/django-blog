@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<article>
+  <img src="{{ object.author.profile.image.url }}" width="125">
+  <a href="#">{{ object.author }}</a>
+  <small>{{ object.date_posted|date:"F d, Y" }}</small>
+  {% if object.author == user %}
+    <a href="{% url 'post-update' object.id %}">Update</a>
+    <a href="{% url 'post-delete' object.id %}">Delete</a>
+  {% endif %}
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.content }}</p>
+</article>
+
+{% endblock content %}
