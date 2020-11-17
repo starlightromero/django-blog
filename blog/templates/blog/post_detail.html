@@ -3,7 +3,7 @@
 
 <article>
   <img src="{{ object.author.profile.image.url }}" width="125">
-  <a href="#">{{ object.author }}</a>
+  <a href="{{ url 'user-posts' post.author.username }}">{{ object.author }}</a>
   <small>{{ object.date_posted|date:"F d, Y" }}</small>
   {% if object.author == user %}
     <a href="{% url 'post-update' object.id %}">Update</a>
