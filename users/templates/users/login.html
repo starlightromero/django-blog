@@ -9,6 +9,7 @@
       {{ form.as_p }}
     </fieldset>
     <button type="submit" name="login">Login</button>
+    <small><a href="{{ url 'password_reset' }}">Forgot Password?</a></small>
   </form>
   <small>
     Need an account? <a href="{% url 'register' %}">Sign Up Now</a>
